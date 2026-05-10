@@ -12,13 +12,6 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'Dumiso Ngwenyama | Premier Tech & Digital Agency',
   description: 'Full-service tech company specializing in complete software development lifecycles, striking design, and data-driven media strategies.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-     
-    ],
-    apple: '/apple-icon.png',
-  },
 }
 
 export default function RootLayout({
