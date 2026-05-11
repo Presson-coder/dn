@@ -16,7 +16,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/">
             <Image 
-              src="/images/logo.png" 
+              src="/images/dn-logo.png" 
               alt="Dumiso Ngwenyama" 
               width={200} 
               height={50} 
