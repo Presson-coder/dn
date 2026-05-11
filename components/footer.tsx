@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react"
 
 const footerLinks = {
@@ -28,8 +29,14 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="text-xl font-bold tracking-tight text-foreground">
-              Dumiso Ngwenyama
+            <Link href="/">
+              <Image 
+                src="/images/footer-logo.png" 
+                alt="Dumiso Ngwenyama" 
+                width={200} 
+                height={50} 
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="mt-4 text-muted-foreground max-w-md leading-relaxed">
               A premier tech and digital agency delivering end-to-end solutions 
