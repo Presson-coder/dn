@@ -31,7 +31,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/">
               <Image 
-                src="/images/footer-logo.png" 
+                src="/images/dn-logo.png" 
                 alt="Dumiso Ngwenyama" 
                 width={200} 
                 height={50} 
