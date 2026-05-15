@@ -5,12 +5,13 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -53,21 +54,32 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden md:block">
-            <Button asChild>
-              <Link href="#contact">Start a Project</Link>
-            </Button>
-          </div>
+          {/* Actions & Mobile Menu Button */}
+          <div className="flex items-center gap-4">
+            <div className="hidden md:block">
+              <ThemeToggle />
+            </div>
+            
+            {/* CTA Button - Desktop */}
+            <div className="hidden md:block">
+              <Button asChild>
+                <Link href="#contact">Start a Project</Link>
+              </Button>
+            </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+            <div className="md:hidden">
+              <ThemeToggle />
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden p-2 text-foreground"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
